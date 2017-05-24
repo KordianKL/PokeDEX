@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokeDEX" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ytu-2j-7vI">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="00W-Az-2AE"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="194" id="1qw-gf-Wkn"/>
+                                    <constraint firstAttribute="height" constant="200" id="nq5-eN-jmm"/>
+                                </constraints>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unknown-1" translatesAutoresizingMaskIntoConstraints="NO" id="VXo-p4-Nu4">
+                                <rect key="frame" x="36" y="94" width="303" height="304"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="304" id="ePR-Xl-vq2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select Pokèmon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e5-Sf-vkb">
+                                <rect key="frame" x="59" y="28" width="256" height="33.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="UMF-Ti-uSi">
+                                <rect key="frame" x="0.0" y="423" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ytu-2j-7vI" firstAttribute="top" secondItem="UMF-Ti-uSi" secondAttribute="bottom" id="2Zl-6f-vKv"/>
+                            <constraint firstAttribute="trailing" secondItem="ytu-2j-7vI" secondAttribute="trailing" id="6K9-51-Fm1"/>
+                            <constraint firstItem="VXo-p4-Nu4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="J0J-PU-U7G"/>
+                            <constraint firstItem="8e5-Sf-vkb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="JOS-r3-3mD"/>
+                            <constraint firstItem="VXo-p4-Nu4" firstAttribute="top" secondItem="8e5-Sf-vkb" secondAttribute="bottom" constant="32.5" id="Kl3-ED-Ylo"/>
+                            <constraint firstItem="ytu-2j-7vI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V79-jh-A7U"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ytu-2j-7vI" secondAttribute="bottom" id="Zmc-hK-c04"/>
+                            <constraint firstItem="8e5-Sf-vkb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bMI-nw-257"/>
+                            <constraint firstItem="UMF-Ti-uSi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h6S-0b-oGw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VXo-p4-Nu4" secondAttribute="trailing" constant="20" id="mOk-xm-AvZ"/>
+                            <constraint firstAttribute="trailing" secondItem="UMF-Ti-uSi" secondAttribute="trailing" id="yoE-B0-ZsM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pokemonsNameUILabel" destination="8e5-Sf-vkb" id="3HH-0U-v6c"/>
+                        <outlet property="pokemonsSearchBar" destination="UMF-Ti-uSi" id="uRD-JP-0sf"/>
+                        <outlet property="pokemonsUIImageView" destination="VXo-p4-Nu4" id="c4D-is-TWa"/>
+                        <outlet property="pokemonsUITableView" destination="ytu-2j-7vI" id="ysy-0v-aEI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="unknown-1" width="413" height="413"/>
+    </resources>
+</document>
